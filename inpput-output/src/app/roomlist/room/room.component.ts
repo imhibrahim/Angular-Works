@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Room } from '../../../models/room';
 
 @Component({
@@ -9,5 +9,10 @@ import { Room } from '../../../models/room';
 export class RoomComponent {
 
   @Input() room:Room={}
+@Output() GetSelectRoomId = new EventEmitter<any>();
+
+  SelectRoom(roomNo:any ){
+   this.GetSelectRoomId.emit(roomNo);
+  }
 
 }

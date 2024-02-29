@@ -7,11 +7,18 @@ import { Room } from '../../models/room';
   styleUrl: './roomlist.component.css'
 })
 export class RoomlistComponent {
+  selectRoom:Room={};
 
   @Input() AllRooms:Room[]=[]
 
-  onRoomSelect()
-{
-  alert(); 
+selectroom(event:any){
+  
+  this.AllRooms.filter((item)=>{
+if(item.roomnumber == event){
+  this.selectRoom=item;
+
+}
+  });
+
 }
 }
