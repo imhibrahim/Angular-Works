@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-6">
+  
+       <div class="row">
+        <div class="col-md-6  mt-3" *ngFor="let item of AllRooms"  >
+       <app-room [room]="item"></app-room>
+      </div>
+       </div>
+      </div>
+      <div class="col-md-6"></div>
+    </div>
+  </div>
